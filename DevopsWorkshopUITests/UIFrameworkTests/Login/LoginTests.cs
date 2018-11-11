@@ -15,12 +15,6 @@ namespace UIFrameworkTests.Login
             // Create an instance of Login page 
             // Navigate to page
             // Login
-
-            var page = new LoginPage(Driver);
-            page.GoTo();
-
-            page.Login();
-            TakeScreenShot("testscreenshot");
         }
     }
 }

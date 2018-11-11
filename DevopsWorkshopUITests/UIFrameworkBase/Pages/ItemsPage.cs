@@ -7,8 +7,8 @@ namespace UIFrameworkBase.Pages
         // TODO H2: Implement properties on ItemsPage
         public IWebElement CreateNewButton => Driver.FindElement(By.XPath("//button[contains(text(),'Create new')]"));
         public IWebElement Title => Driver.FindElement(By.Id("title"));
-        public IWebElement Description => Driver.FindElement(By.Id("description"));
-        public IWebElement SubmitButton => Driver.FindElement(By.XPath("//button[contains(text(),'Create')]"));
+        public IWebElement Description => Driver.FindElement(By.Id(""));
+        public IWebElement SubmitButton => Driver.FindElement(By.XPath(""));
 
         public ItemsPage(IWebDriver driver) : base(driver)
         {

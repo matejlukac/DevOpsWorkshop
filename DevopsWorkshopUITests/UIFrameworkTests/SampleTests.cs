@@ -27,7 +27,9 @@ namespace UIFrameworkTests
         [Test]
         public void DriverWaitExample()
         {
-            var page = new LoginPage(Driver);
+            var driver = InitWebDriver();
+
+            var page = new LoginPage(driver);
             page.GoTo();
             page.Login();
 
@@ -35,16 +37,16 @@ namespace UIFrameworkTests
             // Sign in
             // Wait for the app to load
             // The page is fully loaded when the Logout button is visible
+            // Use method Until on WebDriverWait object
 
-            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(20));
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
             wait.IgnoreExceptionTypes(new Type[] { typeof(StaleElementReferenceException) });
-
-            wait.Until(d =>
-            {
-                return d.FindElements(By.XPath("//button[contains(text(),'Logout')]")).Count > 0;
-            });
+            
 
             // TODO G2: Refactor waiting using ExpectedConditions
+
+            driver.Quit();
+            driver.Dispose();
         }
     }
 }

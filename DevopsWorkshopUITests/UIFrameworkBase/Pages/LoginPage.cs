@@ -20,6 +20,7 @@ namespace UIFrameworkBase.Pages
             LoginButton.Click();
 
             // TODO G3: Better wait after login
+            // Wait for Logout button
             System.Threading.Thread.Sleep(10000);
         }
     }

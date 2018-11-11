@@ -22,7 +22,7 @@ namespace UIFrameworkTests.Items
             var page = new ItemsPage(Driver);
             // TODO H1: Implement properties on ItemsPage
             // Uncomment the test
-            page.CreateNewItem("title", "description");
+            // page.CreateNewItem("title", "description");
         }
     }
 }

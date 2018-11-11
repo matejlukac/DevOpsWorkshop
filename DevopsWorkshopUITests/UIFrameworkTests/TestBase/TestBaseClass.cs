@@ -23,7 +23,7 @@ namespace UIFrameworkTests.TestBase
             var options = new ChromeOptions()
             {
                 // TODO A: Create new ChromeOptions with path to the chrome binary     
-                BinaryLocation = CHROME_BINARY_PATH
+                
             };
 
             // TODO K: Custom browser profiles
@@ -33,33 +33,30 @@ namespace UIFrameworkTests.TestBase
             // Setup headless browser
             // use AddArguments on ChromeOptions "--headless" to run headless chrome
             // use AddArguments on ChromeOptions "--window-size=1280,1024" to run headless chrome in custom resolution
-
-            options.AddArguments("--headless");
-            options.AddArguments($"--window-size={1280},{1024}");
-
+            
             return new ChromeDriver(service, options);
         }
 
-        [SetUp]
+       
         public void SetUp()
         {
             // TODO C: Create a chrome driver instance before every test with NUnit life cycle
             // Decorate the method with [SetUp] attribute
             // Define a new property Driver of IWebDriver type
             // Init Driver property with InitWebDriver() method
-            Driver = InitWebDriver();
+            
 
             // TODO F2: Set implicit wait for element
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+            // Use Manage().Timeouts() object on driver
         }
 
-        [TearDown]
+        
         public void TearDown()
         {
             // TODO E: Dispose the web driver instance after every test with NUnit life cycle
             // Decorate the method with [TearDown] attribute
-            // Dispose the web driver
-            Driver.Dispose();
+            // Quit and dispose the web driver
+            
         }
 
         // TODO I: Implement a method that takes a screenshot
@@ -68,13 +65,12 @@ namespace UIFrameworkTests.TestBase
         // Save the screenshot with SaveAsFile method
         public void TakeScreenShot(string fileName)
         {
+            // Path where to save the screenshot
             var path = Path.Combine(TestContext.CurrentContext.TestDirectory, fileName + ".png");
 
-            Screenshot ss = ((ITakesScreenshot)Driver).GetScreenshot();
-            ss.SaveAsFile(path, ScreenshotImageFormat.Png);
 
             // TODO J: Attach screenshot to NUnit
-            TestContext.AddTestAttachment(path);
+            // Use method AddTestAttachment on TestContext
         }
     }
 }
