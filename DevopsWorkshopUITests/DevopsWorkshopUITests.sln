@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIFrameworkBase", "UIFrameworkBase\UIFrameworkBase.csproj", "{B9E9F42F-5FF2-4A04-9936-61F76347F925}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIFrameworkTests", "UIFrameworkTests\UIFrameworkTests.csproj", "{39E5042C-2DE5-48E3-98C4-A16C00E818A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9E9F42F-5FF2-4A04-9936-61F76347F925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9E9F42F-5FF2-4A04-9936-61F76347F925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9E9F42F-5FF2-4A04-9936-61F76347F925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9E9F42F-5FF2-4A04-9936-61F76347F925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39E5042C-2DE5-48E3-98C4-A16C00E818A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39E5042C-2DE5-48E3-98C4-A16C00E818A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39E5042C-2DE5-48E3-98C4-A16C00E818A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39E5042C-2DE5-48E3-98C4-A16C00E818A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4845B85-F0DE-40AE-8BB2-178CFF76B9CD}
+	EndGlobalSection
+EndGlobal
