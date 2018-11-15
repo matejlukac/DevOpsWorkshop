@@ -19,7 +19,7 @@ namespace UIFrameworkTests
             // Dispose the driver
 
             var driver = InitWebDriver();
-            driver.Navigate().GoToUrl("http://localhost");
+            driver.Navigate().GoToUrl(Settings.BaseUrl);
             driver.Quit();
             driver.Dispose();
         }

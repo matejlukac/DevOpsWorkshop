@@ -1,15 +1,13 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using System;
 using System.IO;
+using UIFrameworkBase.Settings;
 
 namespace UIFrameworkTests.TestBase
 {
     public class TestBaseClass
     {
-        private string CHROME_BINARY_PATH = @"C:\Git\WorkshopFi\Chromium\chrome.exe";
-
         // TODO D: Define a new property Driver of IWebDriver type
         public IWebDriver Driver
         {
@@ -17,13 +15,15 @@ namespace UIFrameworkTests.TestBase
             set;
         }
 
+        public Settings Settings = SettingsLoader.LoadSettings();
+
         public IWebDriver InitWebDriver()
         {
             var service = ChromeDriverService.CreateDefaultService();
             var options = new ChromeOptions()
             {
-                // TODO A: Create new ChromeOptions with path to the chrome binary     
-                
+                // TODO A: Create new ChromeOptions with path to the chrome binary
+                // Get the path from Settings object
             };
 
             // TODO K: Custom browser profiles
